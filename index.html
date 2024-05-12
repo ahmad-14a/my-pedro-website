@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pedro Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            position: relative; /* Required for absolute positioning */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .developers {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .developer {
+            display: inline-block;
+            margin: 0 10px;
+            font-style: italic;
+        }
+        .gif-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .gif {
+            max-width: 100%;
+            border-radius: 50%; /* Circular edges */
+        }
+        #audioContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Pedro Website</h1>
+    </header>
+    <div class="gif-container">
+        <img src="racoon_gif.gif" alt="Racoon GIF" class="gif">
+    </div>
+    <div class="gif-container">
+        <h2>My name's Pedro. Just Pedro.</h2>
+        <p>But you can call me... The Pedro.</p> 
+    </div>
+    <div id="audioContainer">
+        <audio id="myAudio" src="pedro.mp3" preload="none" controls loop>
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="container">
+        <div class="developers">
+            <p>Developed by:</p>
+            <span class="developer">Ahmad Ali</span>
+            <span class="developer">Pedro (The Racoon)</span>
+            <span class="developer">Eman Shakeel</span>
+        </div>
+    </div>
+
+    <script>
+        const button = document.getElementById("playButton");
+        const audio = document.getElementById("myAudio");
+
+        button.addEventListener("click", () => {
+            audio.play();
+        });
+    </script>   
+</body>
+</html>
